@@ -31,7 +31,7 @@ namespace Elemendid_Osa1
                     new ColumnDefinition{Width=new GridLength(1,GridUnitType.Star)}
                 }
             };
-            ent = new Entry { Text = " "};
+            ent = new Entry { Text = " ", IsReadOnly= true};
             pic1 = new Picker { Title = "Уезды"};
             pic2 = new Picker { Title ="Столицы уездов"};
             pic1.Items.Add("Хийумаа");
@@ -251,6 +251,7 @@ namespace Elemendid_Osa1
             {
                 pic2.SelectedIndex = 12;
                 img = new Image { Source = "Properties/Resources/img/hiiumaa.jpg" };
+                gr.Children.Add(img, 0, 1);
                 ent.Text = "Уезд в Эстонии, расположенный в западной части страны. Граничит с уездами Ярвамаа на востоке, Пярнумаа на юге, Ляэнемаа на западе и Харьюмаа на севере. Административный центр - город Рапла. Уезд в административном отношении делится на 10 волостей.";
             }
             if (pic1.SelectedIndex == 13)
